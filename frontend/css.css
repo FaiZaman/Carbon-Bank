@@ -1,0 +1,7 @@
+.b-container {
+    background-image: url(img/background.jpg);
+    background: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: auto;
+}

@@ -1,7 +1,26 @@
-.b-container {
-    background-image: url(img/background.jpg);
-    background: no-repeat;
-    background-position: right top;
-    background-attachment: fixed;
-    background-size: auto;
+* {
+    margin: 0;
+    font-family: monospace;
+}
+
+.title {
+    height: 80px;
+    background-color: #171717;
+
+}
+
+.title>div {
+    color: white;
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 700;
+    margin-left: 20px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.b-container>img {
+    width: 100%;
+    position: fixed;
 }

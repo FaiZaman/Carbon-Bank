@@ -18,12 +18,32 @@ app.get('/', (request, response)=> {
 });
 
 app.get('/query', (request, response) => {
-  connection.query("SELECT * FROM users;",
-    function(error, results){
-      if (error) throw error;
-      response.json(results);
+  let user;
+  let i;
+  for (user = 1; user < 4; user++){
+    for (i = 0; i < 30; i++){
+      let date = Math.floor(Math.random() * (23) + 1);
+      const transdate = "2019-11-" + date;
+      const flow = Math.round(Math.random());
+      const cat = Math.floor(Math.random() * (7) + 1);
+      let amount = 0;
+      const smallAmount = Math.floor(Math.random() * (5, 20)) + 20;
+      const largeAmount = Math.floor(Math.random() * (100, 500));
+      const probability = Math.random();
+      if (probability > 0.05){
+        amount = smallAmount;
+      }
+      else{
+        amount = largeAmount;
+      }
+      console.log("INSERT INTO transactions (transdate, flow, cat, usID, amount) values (" + "'" + transdate + "', " + flow + ", " + cat + ", " + user + ", " + amount + ");");
+      connection.query("INSERT INTO transactions (transdate, flow, cat, usID, amount) values (" + "'" + transdate + "', " + flow + ", " + cat + ", " + user + "," + amount + ");",
+        function(error, results){
+          if (error) throw error;
+        }
+      );
     }
-  );
+  }
 });
 
 module.exports = app;

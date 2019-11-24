@@ -12,6 +12,9 @@
 
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -221,13 +224,31 @@
 </body>
 
 <script>
-    $(".card").click(function () {
+
+    $(".card").click(function() {
         $("#overlay").css("display", "block");
         $(".popups").css("display", "flex");
     });
-    $("#popclose").click(function () {
+    $("#popclose").click(function() {
         $(this).parent().parent().css("display", "none");
         $("#overlay").css("display", "none");
+    });
+
+    $(document).ready(function() {
+        fetch('/carbonQuery').then((response) => {
+            response.json().then((results) => {
+                if (results[0].CarbonBool){
+                    console.log(results[0].CarbonPercent);
+                    CarbonPercent = CarbonPercent/100;
+                }
+            });
+        });
+     
+        fetch('/transactionSum').then((response) => {
+            response.json().then((results) => {
+                
+            });
+        });
     });
 </script>
 

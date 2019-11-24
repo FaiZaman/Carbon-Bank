@@ -58,6 +58,24 @@ app.get('/calculate', (request, response) => {
   )
 });
 
+app.get('/carbonQuery', (request, response) => {
+  connection.query("SELECT CarbonBool, CarbonPercent FROM users WHERE userID = 2",
+    function(error, results){
+      if (error) throw error;
+      response.json(results);
+    }
+  )
+});
+
+app.get('/transactionSum', (request, response) => {
+  connection.query("SELECT amount FROM transactions WHERE userID = 2 AND cat = 2",
+    function(error, results){
+      if (error) throw error;
+      response.json(results);
+    }
+  );
+});
+
 function fuelCostCalculator(amount){
   const litreFuelCost = 1.189
   let totalCost = (amount/litreFuelCost) * 2.3 // value per footprint

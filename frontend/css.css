@@ -252,3 +252,136 @@ footer>div {
     display: flex;
     justify-content: center;
 }
+
+.bud-head {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.sett-title {
+    margin-right: 30px;
+    font-size: 1.5rem;
+    background-color: darkorange;
+    padding: 5px;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+
+.bud-head:nth-child(1) {
+    font-size: 1.1rem;
+}
+
+.bud-head>input {
+    margin-left: 10px;
+    width: 50px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.col {
+    text-align: center;
+
+}
+
+.col>input {
+    width: 70px;
+    margin-top: 3px;
+}
+
+.row:nth-child(1)>div>div {
+    padding-top: 5px;
+}
+
+.budget,
+.cooffset,
+.categories,
+.submit {
+    margin-top: 70px;
+}
+
+.cooffset,
+.categories {
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+}
+
+.cat-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    width: -webkit-fill-available;
+}
+
+
+
+.cat-list-elem>div:nth-child(2) {
+    background-color: red;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    width: 15px;
+    color: white;
+    border-radius: 10px;
+    line-height: 5px;
+    height: 15px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+}
+
+
+.cat-list-elem {
+    position: relative;
+    padding: 3px;
+    border: 1px solid gray;
+    background-color: lightblue;
+    font-weight: 900;
+}
+
+.cat-list-elem.plus>#add-cat {
+    width: 12px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+.submit>button {
+    font-size: 1.5rem;
+    background-color: lightgreen;
+    border: 1px solid darkgray;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.da-head>a {
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.da-head>a>img {
+    cursor: pointer;
+
+}
+
+.card-cfoot {
+    text-align: center;
+    margin-left: 10px;
+    color: red;
+}
+
+.card-cfoot>img {
+    width: 55px;
+    border: 1px solid gray;
+    border-radius: 28px;
+}

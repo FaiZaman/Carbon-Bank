@@ -3,6 +3,10 @@
     font-family: monospace;
 }
 
+body {
+    background: url(img/background.jpg)
+}
+
 .title {
     height: 80px;
     background-color: #171717;
@@ -20,7 +24,49 @@
 
 }
 
+.b-container {
+    display: flex;
+    justify-content: center;
+}
+
 .b-container>img {
     width: 100%;
     position: fixed;
+}
+
+.display-area {
+    width: 80%;
+    height: 680px;
+    background-color: white;
+    z-index: 1;
+}
+
+.da-head {
+    display: flex;
+    align-items: center;
+}
+
+.da-head>div {
+    font-size: 2rem;
+    margin-left: -10px;
+}
+
+.da-head>img {
+    width: 85px;
+}
+
+.sec-title {
+    font-size: 1.8rem;
+    margin-left: 20px;
+}
+
+footer {
+    height: 40px;
+    background-color: #171717;
+}
+
+footer>div {
+    color: white;
+    padding-top: 10px;
+    padding-left: 10px;
 }

@@ -36,7 +36,6 @@ app.get('/query', (request, response) => {
       else{
         amount = largeAmount;
       }
-      console.log("INSERT INTO transactions (transdate, flow, cat, usID, amount) values (" + "'" + transdate + "', " + flow + ", " + cat + ", " + user + ", " + amount + ");");
       connection.query("INSERT INTO transactions (transdate, flow, cat, usID, amount) values (" + "'" + transdate + "', " + flow + ", " + cat + ", " + user + "," + amount + ");",
         function(error, results){
           if (error) throw error;

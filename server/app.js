@@ -45,4 +45,23 @@ app.get('/query', (request, response) => {
   }
 });
 
+app.get('/calculate', (request, response) => {
+
+  connection.query("SELECT amount FROM transactions WHERE cat = 2",
+    function(error, results){
+      if (error) throw error;
+      for (let i = 0; i < results.length; i++){
+        let price = results[i].amount;
+        price = fuelCostCalculator(price);
+      }
+    }
+  )
+});
+
+function fuelCostCalculator(amount){
+  const litreFuelCost = 1.189
+  let totalCost = (amount/litreFuelCost) * 2.3 // value per footprint
+  return totalCost.toFixed(2);
+}
+
 module.exports = app;

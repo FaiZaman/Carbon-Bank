@@ -13,9 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', (request, response)=> {
-  response.send("Hello World!");
-});
+app.use(express.static('../frontend'));
 
 app.get('/query', (request, response) => {
   let user;
@@ -47,12 +45,14 @@ app.get('/query', (request, response) => {
 
 app.get('/calculate', (request, response) => {
 
-  connection.query("SELECT transcationID amount FROM transactions WHERE cat = 2",
+  connection.query("SELECT transactionID, amount FROM transactions WHERE cat = 2",
     function(error, results){
       if (error) throw error;
       for (let i = 0; i < results.length; i++){
+        let transID = results[i].transactionID;
         let price = results[i].amount;
         price = fuelCostCalculator(price);
+        fuelCarbonInsert(transID, price);
       }
     }
   )
@@ -64,11 +64,10 @@ function fuelCostCalculator(amount){
   return totalCost.toFixed(2);
 }
 
-function fuelCarbonInsert(price){
+function fuelCarbonInsert(transID, price){
   
   connection.query("UPDATE transactions SET carbon = " + price + " WHERE transactionID = " + transID,
     function(error, results){
-      response.json(results);
     }
   )
 }

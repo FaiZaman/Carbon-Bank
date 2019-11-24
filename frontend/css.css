@@ -237,12 +237,18 @@ body {
 }
 
 footer {
-    height: 40px;
+    height: 28px;
     background-color: #171717;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 20;
 }
 
 footer>div {
     color: white;
     padding-top: 10px;
     padding-left: 10px;
+    display: flex;
+    justify-content: center;
 }

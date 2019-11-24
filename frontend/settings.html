@@ -1,57 +1,108 @@
 <!DOCTYPE html>
 <html>
-    <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <!-- Latest compiled and minified CSS -->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-            <link rel="stylesheet" type="text/css" href="custom.css">
 
-<!-- jQuery library -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="css.css">
+    </link>
+    <script type="text/javascript" src="js.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<!-- Popper JS -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+</head>
 
-<!-- Latest compiled JavaScript -->
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<body>
+    <header>
+        <div class="title">
+            <div>CarbonBank</div>
+        </div>
 
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky">
-            <a class="navbar-brand" href="./homepage.html">Carbon Bank</a>
-            <span class="navbar-text">
-                <a href="./maincopy.html">
-                    PUT USERNAME HERE
-                </a>
-            </span>
-            <ul class="nav navbar-nav navbar-right">
-                    <li><a href="./settings.html"> <img src="./img/icons8-settings.svg" height="20px" width="20px">  </a></li>
-        </nav>
-        
-        
-        <div class="container-fluid">
-            <h1>
-                Settings
-            </h1>
-    <script>
-        $(document).ready(function(){
-            $(".xx-report").hide();
-            $(".transport-report").hide();
-            $(".food-report").hide();
-            $(".living-report").hide();
+    </header>
+    <div class="b-container">
+        <div class="display-area">
+            <div class="da-head">
+                <img src="./img/icons8-settings.svg" height="20px" width="20px">
+                <div>Settings:</div>
+            </div>
+            <hr>
+            <div class="budget">
+                <div class="bud-head">
+                    <div class="sett-title">
+                        <div>Budget/week</div>
+                    </div>
+                    <div>
+                        Total per week:
+                    </div>
+                    <input type="text" name="tot-week" onchange="update()">
+                </div>
+                <div class="row-wrap">
+                    <div class="row">
+                        <div class="row-elem">-</div>
+                        <div class="row-elem">Fuel</div>
+                        <div class="row-elem">Transport</div>
+                        <div class="row-elem">Food</div>
+                        <div class="row-elem">Living</div>
+                        <div class="row-elem">Recreation</div>
+                        <div class="row-elem">Pets</div>
+                        <div class="row-elem">Kids</div>
+                    </div>
+                    <div class="row">
+                        <div class="row-elem">£</div>
+                        <div class="row-elem">-</div>
+                        <div class="row-elem">-</div>
+                        <div class="row-elem">-</div>
+                        <div class="row-elem">-</div>
+                        <div class="row-elem">-</div>
+                        <div class="row-elem">-</div>
+                        <div class="row-elem">-</div>
+                    </div>
+                    <div class="row">
+                        <div class="row-elem">%</div>
+                        <div class="row-elem"></div>
+                        <div class="row-elem"></div>
+                        <div class="row-elem"></div>
+                        <div class="row-elem"></div>
+                        <div class="row-elem"></div>
+                        <div class="row-elem"></div>
+                        <div class="row-elem"></div>
+                    </div>
+                </div>
 
-            
+            </div>
+            <div class="cooffset">
+                <div class="sett-title">
+                    <div>Your carbon offset</div>
+                </div>
+            </div>
+            <div class="categories">
+                <div class="sett-title">
+                    <div>Categories</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        // jQuery methods go here...
-            $(".fuel-card, .transport-card, .food-card, .living-card").click(function(){
-                $(".card-row").hide();
-                $(".xx-report").show();
-            });
-        });
-        
 
-    </script>
-    
-    </body>
+
+    <footer>
+        <div>
+            "Intellectual Property of Irenitemi Agbejule, Matthias Schmutzer"
+        </div>
+    </footer>
+</body>
+
+<script>
+    $(".card").click(function () {
+        $("#overlay").css("display", "block");
+        $(".popups").css("display", "flex");
+    });
+    $("#popclose").click(function () {
+        $(this).parent().parent().css("display", "none");
+        $("#overlay").css("display", "none");
+    });
+</script>
+
 </html>

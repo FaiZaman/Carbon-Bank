@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+            <link rel="stylesheet" type="text/css" href="custom.css">
+
+<!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky">
+            <a class="navbar-brand" href="./homepage.html">Carbon Bank</a>
+            <span class="navbar-text">
+                <a href="./maincopy.html">
+                    PUT USERNAME HERE
+                </a>
+            </span>
+            <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./settings.html"> <img src="./img/icons8-settings.svg" height="20px" width="20px">  </a></li>
+        </nav>
+        
+        
+        <div class="container-fluid">
+            <h1>
+                Settings
+            </h1>
+    <script>
+        $(document).ready(function(){
+            $(".xx-report").hide();
+            $(".transport-report").hide();
+            $(".food-report").hide();
+            $(".living-report").hide();
+
+            
+
+        // jQuery methods go here...
+            $(".fuel-card, .transport-card, .food-card, .living-card").click(function(){
+                $(".card-row").hide();
+                $(".xx-report").show();
+            });
+        });
+        
+
+    </script>
+    
+    </body>
+</html>

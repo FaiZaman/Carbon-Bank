@@ -1,0 +1,21 @@
+.card {
+    width: 100%;
+    padding-bottom: 50px;
+}
+.card-report{
+    width: 100%;
+}
+.card-title{
+    align-content: center;
+}
+.expense-list{
+    height: 20px; 
+    overflow-y: auto;
+}
+.progress{
+    transform: rotate(270deg);
+}
+#reportprogress{
+    height: 25px;
+    
+}

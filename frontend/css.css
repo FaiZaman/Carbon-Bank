@@ -373,3 +373,15 @@ footer>div {
     cursor: pointer;
 
 }
+
+.card-cfoot {
+    text-align: center;
+    margin-left: 10px;
+    color: red;
+}
+
+.card-cfoot>img {
+    width: 55px;
+    border: 1px solid gray;
+    border-radius: 28px;
+}

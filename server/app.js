@@ -47,7 +47,7 @@ app.get('/query', (request, response) => {
 
 app.get('/calculate', (request, response) => {
 
-  connection.query("SELECT amount FROM transactions WHERE cat = 2",
+  connection.query("SELECT transcationID amount FROM transactions WHERE cat = 2",
     function(error, results){
       if (error) throw error;
       for (let i = 0; i < results.length; i++){
@@ -62,6 +62,15 @@ function fuelCostCalculator(amount){
   const litreFuelCost = 1.189
   let totalCost = (amount/litreFuelCost) * 2.3 // value per footprint
   return totalCost.toFixed(2);
+}
+
+function fuelCarbonInsert(price){
+  
+  connection.query("UPDATE transactions SET carbon = " + price + " WHERE transactionID = " + transID,
+    function(error, results){
+      response.json(results);
+    }
+  )
 }
 
 module.exports = app;

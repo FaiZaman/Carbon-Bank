@@ -252,3 +252,61 @@ footer>div {
     display: flex;
     justify-content: center;
 }
+
+.bud-head {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.sett-title {
+    margin-right: 30px;
+    font-size: 1.5rem;
+    background-color: darkorange;
+    padding: 5px;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+
+.bud-head:nth-child(1) {
+    font-size: 1.1rem;
+}
+
+.bud-head>input {
+    margin-left: 10px;
+    width: 50px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.col {
+    text-align: center;
+
+}
+
+.col>input {
+    width: 70px;
+    margin-top: 3px;
+}
+
+.row:nth-child(1)>div>div {
+    padding-top: 5px;
+}
+
+.budget,
+.cooffset,
+.categories,
+.submit {
+    margin-top: 40px;
+}
+
+.cooffset,
+.categories {
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+}

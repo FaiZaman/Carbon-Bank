@@ -34,53 +34,80 @@
                         <div>Budget/week</div>
                     </div>
                     <div>
-                        Total per week:
+                        Total per week (£):
                     </div>
                     <input type="text" name="tot-week" onchange="update()">
                 </div>
                 <div class="row-wrap">
                     <div class="row">
-                        <div class="row-elem">-</div>
-                        <div class="row-elem">Fuel</div>
-                        <div class="row-elem">Transport</div>
-                        <div class="row-elem">Food</div>
-                        <div class="row-elem">Living</div>
-                        <div class="row-elem">Recreation</div>
-                        <div class="row-elem">Pets</div>
-                        <div class="row-elem">Kids</div>
-                    </div>
-                    <div class="row">
-                        <div class="row-elem">£</div>
-                        <div class="row-elem">-</div>
-                        <div class="row-elem">-</div>
-                        <div class="row-elem">-</div>
-                        <div class="row-elem">-</div>
-                        <div class="row-elem">-</div>
-                        <div class="row-elem">-</div>
-                        <div class="row-elem">-</div>
-                    </div>
-                    <div class="row">
-                        <div class="row-elem">%</div>
-                        <div class="row-elem"></div>
-                        <div class="row-elem"></div>
-                        <div class="row-elem"></div>
-                        <div class="row-elem"></div>
-                        <div class="row-elem"></div>
-                        <div class="row-elem"></div>
-                        <div class="row-elem"></div>
+                        <div class="col">
+                            <div>o</div>
+                            <div>£</div>
+                            <div>%</div>
+                        </div>
+                        <div class="col">
+                            <div>Fuel</div>
+                            <input>
+                            <input>
+                        </div>
+                        <div class="col">
+                            <div>Transport</div>
+                            <input>
+                            <input>
+                        </div>
+                        <div class="col">
+                            <div>Food</div>
+                            <input>
+                            <input>
+                        </div>
+                        <div class="col">
+                            <div>Living</div>
+                            <input>
+                            <input>
+                        </div>
+                        <div class="col">
+                            <div>Recreation</div>
+                            <input>
+                            <input>
+                        </div>
+                        <div class="col">
+                            <div>Pets</div>
+                            <input>
+                            <input>
+                        </div>
+                        <div class="col">
+                            <div>Kids</div>
+                            <input>
+                            <input>
+                        </div>
+
                     </div>
                 </div>
 
             </div>
             <div class="cooffset">
                 <div class="sett-title">
-                    <div>Your carbon offset</div>
+                    <div>Your % carbon offset</div>
                 </div>
+                <input>
+                <button>Calculate Price!</button>
             </div>
             <div class="categories">
                 <div class="sett-title">
                     <div>Categories</div>
                 </div>
+                <div class="cat-list">
+                    <div class="cat-list-elem">
+                        <div>Fuel</div>
+                        <div>-</div>
+                    </div>
+                    <div class="cat-list-elem plus">
+                        <img src="img/plus-black-symbol.svg" id="add-cat">
+                    </div>
+                </div>
+            </div>
+            <div class="submit">
+                <button>Submit</button>
             </div>
         </div>
     </div>

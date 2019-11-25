@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="css.css">
+    </link>
+    <script type="text/javascript" src="js.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <div><a href="./index.html">CarbonBank</a></div>
+        </div>
+
+    </header>
+    <div class="b-container">
+        <div class="display-area">
+            <div class="da-head">
+                <img src="img/home.webp" alt="home">
+                <div>Welcome X, here is your Dashboard:</div>
+                <a href="./settings.html"><img src="./img/icons8-settings.svg" href="./settings.html" height="20px"
+                        width="20px"></a>
+            </div>
+            <hr>
+            <br>
+            <div class="summary">
+                <div class="sec-title">
+                    Summary for this week:
+                </div>
+                <div class="summ-section">
+
+                    <div class="card">
+                        <div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                            <div>
+                                <div class="card-title">
+                                    Fuel
+                                </div>
+                                <div class="mon-left">
+                                    £79 left
+                                </div>
+                            </div>
+                            <div class="card-cfoot">
+                                <img src="./img/co2.jpg">
+                                <div>Produced: 500 Kg</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                            <div>
+                                <div class="card-title">
+                                    Transport
+                                </div>
+                                <div class="mon-left">
+                                    £23 left
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                            <div>
+                                <div class="card-title">
+                                    Food
+                                </div>
+                                <div class="mon-left">
+                                    £50 left
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                            <div>
+                                <div class="card-title">
+                                    Living
+                                </div>
+                                <div class="mon-left">
+                                    £467 left
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                            <div>
+                                <div class="card-title">
+                                    Recreation
+                                </div>
+                                <div class="mon-left">
+                                    £670 left
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                            <div>
+                                <div class="card-title">
+                                    Pets
+                                </div>
+                                <div class="mon-left">
+                                    £8000 left
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                            <div>
+                                <div class="card-title">
+                                    Kids
+                                </div>
+                                <div class="mon-left">
+                                    £7900 left
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card plus">
+                        <div>
+                            <img src="img/plus-black-symbol.svg" id="add-cat">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <div class="popups">
+        <div class="pop-box">
+            <div class="pop-title-wrap">
+                <div class="pop-title">Report: Fuel</div>
+            </div>
+            <div class="pop-allow">
+                <div data-value="500">Monthly Allowence: £500</div>
+                <button>Edit</button>
+            </div>
+            <div class="pop-over-wrap">
+                <div class="bar">
+                    <div></div>
+                </div>
+                <div class="bar-text">
+                    £79 left
+                </div>
+                <div class="scroll">
+                    <div class="elem">
+                        <div>£20</div>
+                        <div>Date</div>
+                    </div>
+                    <div class="elem">
+                        <div>£10</div>
+                        <div>Date</div>
+                    </div>
+                    <div class="elem">
+                        <div>£7</div>
+                        <div>Date</div>
+                    </div>
+                    <div class="elem">
+                        <div>£20</div>
+                        <div>Date</div>
+                    </div>
+                    <div class="elem">
+                        <div>£18</div>
+                        <div>Date</div>
+                    </div>
+                    <div class="elem">
+                        <div>£5</div>
+                        <div>Date</div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-foot">
+                <img src="">
+                <div>Footprint: 500 Kg</div>
+            </div>
+            <img src="img/close.png" alt="close" id="popclose">
+        </div>
+
+
+    </div>
+
+    <footer>
+        <div>
+            "Intellectual Property of Irenitemi Agbejule, Matthias Schmutzer, Ofek Vaich-Shkolnikand, and Faiz Zaman"
+        </div>
+    </footer>
+</body>
+
+<script>
+
+    $(".card").click(function() {
+        $("#overlay").css("display", "block");
+        $(".popups").css("display", "flex");
+    });
+    $("#popclose").click(function() {
+        $(this).parent().parent().css("display", "none");
+        $("#overlay").css("display", "none");
+    });
+
+    $(document).ready(function() {
+        fetch('/carbonQuery').then((response) => {
+            response.json().then((results) => {
+                if (results[0].CarbonBool){
+                    console.log(results[0].CarbonPercent);
+                    CarbonPercent = CarbonPercent/100;
+                }
+            });
+        });
+     
+        fetch('/transactionSum').then((response) => {
+            response.json().then((results) => {
+                
+            });
+        });
+    });
+</script>
+
+</html>
